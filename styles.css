@@ -1,0 +1,193 @@
+/* General Reset and Base Styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Sans', 'Arial', sans-serif; /* Improved font for legibility */
+    line-height: 1.75; /* Increased line-height for readability */
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 1rem; /* Base font size */
+    padding: 1rem; /* Responsive padding */
+}
+
+a {
+    color: #0056b3; /* Michigan Blue */
+    text-decoration: underline;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+    outline: none; /* Remove focus outline */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Typography for Titles and Text Content */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Display font for headings */
+    font-weight: 700; /* Bold headings for clarity */
+    margin-bottom: 0.75rem;
+    color: #00274C; /* Michigan Blue */
+    text-align: left;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem); /* Responsive heading size */
+}
+
+h2 {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+h3 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+p {
+    margin-bottom: 1rem; /* Add spacing between paragraphs */
+    text-align: left; /* Ragged right alignment for readability */
+    line-height: 1.75; /* Adequate space between lines */
+    font-size: 1rem;
+}
+
+/* Header Styles */
+header {
+    background-color: #00274C; /* Michigan Blue */
+    color: #FFFFFF; /* White */
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(1.5rem, 5vw, 2rem); /* Responsive title size */
+    color: #FFCB05;
+}
+
+/* UMSI Logo Image Scaling */
+header img {
+    max-width: 100%;
+    height: auto;
+    width: 150px; /* Adjusted to a more reasonable relative size */
+}
+
+/* Navigation Styles */
+nav ul {
+    padding: 0;
+    margin: 1rem 0 0 0; /* Added top margin for spacing */
+    display: flex;
+    justify-content: space-around; /* Ensures all items are spread out evenly */
+    align-items: center;
+    list-style-type: none;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 0.5rem; /* Space between items */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #FFFFFF; /* White */
+    font-size: 1rem; /* Base font size */
+    padding: 0.5rem 1rem; /* Responsive padding */
+    display: inline-block;
+    border-radius: 4px;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+nav ul li a.active, 
+nav ul li a[aria-current="page"] {
+    font-weight: bold;
+    text-decoration: underline; /* Accessible active page */
+    background-color: #FFCB05; /* Maize */
+    color: #00274C; /* Blue */
+}
+
+nav ul li a:hover, 
+nav ul li a[aria-current="page"]:hover {
+    background-color: #003d72; /* Darker Blue on hover */
+}
+
+/* Skip to Main Link (visually hidden by default) */
+.skip-link {
+    position: absolute;
+    top: -1000px; /* Moves the link far off-screen */
+    left: 1rem;
+    background-color: #FFCB05; /* Maize */
+    color: #00274C; /* Michigan Blue */
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 1rem; /* Brings it back into view when focused */
+    left: 1rem;
+    position: absolute;
+}
+
+/* Main Content Styles */
+main {
+    padding: 1.5rem; /* Fluid padding */
+    max-width: 100%; /* Full width for mobile */
+    margin: 1.25rem auto;
+    background-color: #FFFFFF; /* White */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+h3 {
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+ul li {
+    margin-bottom: 0.5rem; /* Reduced for better spacing */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #00274C; /* Michigan Blue */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 1.25rem;
+    width: 100%;
+}
+
+footer p {
+    margin: 0.5rem 0; /* Ensure spacing between elements */
+    font-size: 1rem; /* Legible footer text size */
+}
+
+footer a {
+    color: #FFCB05; /* Maize */
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+/* Mobile-First Responsive Design (no media queries needed) */
